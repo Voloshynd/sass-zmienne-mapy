@@ -1,0 +1,51 @@
+// scss mozna zagniezdzac 
+nav{
+    padding: 20px;
+
+    .test{
+        padding: 10px; // tergetowanie klas 
+    }
+    ul{
+        list-style: none;
+        li{
+            background-color: red;
+            font-size: 31px;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+// zmienne 
+$nazwaZmiennej: 100px;  
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: sans-serif;
+}
+
+// Mapy
+$colors:(
+    left: lime, // dajemy przecinek na koncu 
+    middle: gold,
+    right: tomato
+);// tworzymy mapy, wymaga srednika na koncu 
+.square{
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}
+
+.item1{
+    background-color: map-get($colors, left);
+}
+.item2{
+    background-color: map-get($colors, middle);
+}
+.item3{
+    background-color: map-get($colors, right);
+}
